@@ -45,7 +45,7 @@ class TeamAssigner:
             player_color = self.get_player_color(frame, bbox)
             player_colors.append(player_color)
         
-        kmeans = KMeans(n_clusters=2, init='k-means++', n_init=1)
+        kmeans = KMeans(n_clusters=2, init='k-means++', n_init=10)
         kmeans.fit(player_colors)
 
         self.kmeans = kmeans
@@ -59,5 +59,10 @@ class TeamAssigner:
         else:
             player_color = self.get_player_color(frame, player_bbox)
             team_id = self.kmeans.predict(player_color.reshape(1, -1))[0] + 1
+
+            # handle goalkeepers later
+            if player_id == 91:
+                team_id = 2
+
             self.player_team_dict[player_id] = team_id
             return team_id
