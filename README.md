@@ -1,1 +1,35 @@
-# analysoccer
+# Soccer Game Footage Analysis
+
+## Introduction
+To analyze live soccer game footage, we train a custom ML model on the DFL - Bundesliga Data Shootout dataset. Key features include:
+- Object detection to identify the players, referees, and ball
+- Tracking the ball and players frame-by-frame in the video and adjusting for camera movement
+- Assigning players to teams based on jersey color
+- Assigning possession of the ball to player based on proximity and calculating team possession statistics
+- Calculating player speed and distance traveled statistics from frame data
+
+## Modules Used
+The following modules are used in this project:
+- YOLO: AI object detection model
+- Kmeans: Pixel segmentation and clustering to detect t-shirt color
+- Optical Flow: Measure camera movement
+- Perspective Transformation: Represent scene depth and perspective
+- Speed and distance calculation per player
+
+## Sample video input and output
+- 
+
+## Test the project
+To run this project, you need to have the following requirements installed:
+- Python 3.x
+- ultralytics
+- supervision
+- OpenCV
+- NumPy
+- Matplotlib
+- Pandas
+
+Steps:
+1. Train your own model based on the sample notebook code in the /training folder and add it to the project
+2. Modify the paths specified in main.py if needed to match the file location of your model and an input video of your choice
+3. Run main.py and view the analyzed video in the /output_videos folder
