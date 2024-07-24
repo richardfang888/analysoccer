@@ -16,8 +16,8 @@ class CameraMovementEstimator:
             criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03)
         )
 
-        first_frame_from_grayscale = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        mask_features = np.zeros_like(first_frame_from_grayscale)
+        first_frame_grayscale = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        mask_features = np.zeros_like(first_frame_grayscale)
         mask_features[:, 0:20] = 1
         mask_features[:, 900:1050] = 1
 

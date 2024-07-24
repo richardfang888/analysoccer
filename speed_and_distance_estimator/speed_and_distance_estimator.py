@@ -16,7 +16,7 @@ class SpeedAndDistance_Estimator():
                 continue 
             number_of_frames = len(object_tracks)
             for frame_num in range(0,number_of_frames, self.frame_window):
-                last_frame = min(frame_num+self.frame_window, number_of_frames-1 )
+                last_frame = min(frame_num+self.frame_window, number_of_frames-1)
 
                 for track_id,_ in object_tracks[frame_num].items():
                     if track_id not in object_tracks[last_frame]:
@@ -30,8 +30,8 @@ class SpeedAndDistance_Estimator():
                     
                     distance_covered = measure_distance(start_position, end_position)
                     time_elapsed = (last_frame-frame_num)/self.frame_rate
-                    speed_meteres_per_second = distance_covered/time_elapsed
-                    speed_km_per_hour = speed_meteres_per_second*3.6
+                    speed_meters_per_second = distance_covered/time_elapsed
+                    speed_km_per_hour = speed_meters_per_second*3.6
 
                     if object not in total_distance:
                         total_distance[object]= {}

@@ -17,7 +17,8 @@ The following modules are used in this project:
 - Speed and distance calculation per player
 
 ## Sample video input and output
-- 
+- Input: https://drive.google.com/file/d/1L39lM-dQ1tVHc4066bRoXhIIPIIPmZt3/view?usp=drive_link
+- Output: https://drive.google.com/file/d/1EDCCkad6-CiFRDSPnTzP5Z7VwBRrC5pp/view?usp=drive_link
 
 ## Test the project
 To run this project, you need to have the following requirements installed:

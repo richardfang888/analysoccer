@@ -72,7 +72,7 @@ def main():
     output_frames = tracker.draw_annotations(frames, tracks, team_ball_control)
 
     ## Draw camera movement
-    output_frames = camera_movement_estimator.draw_camera_movement(output_frames, camera_movement_per_frame)
+    # output_frames = camera_movement_estimator.draw_camera_movement(output_frames, camera_movement_per_frame)
 
     ## Draw Speed and Distance
     speed_and_distance_estimator.draw_speed_and_distance(output_frames, tracks)
